@@ -1,0 +1,11 @@
+week[1] = "Davaa"
+week[2] = "Myagmar"
+week[3] = "Lkhavga"
+week[4] = "Purev"
+week[5] = "Baasan"
+week[6] = "Byamba"
+week[7] = "Nyam"
+
+For i = 1 To 7
+  TextWindow.WriteLine(week[i])
+EndFor
