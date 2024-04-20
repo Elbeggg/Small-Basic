@@ -1,0 +1,57 @@
+    if Controls.LastClickedButton = print then
+        saveWord = Controls.GetTextBoxText(textBoxName)
+        Controls.SetTextBoxText(textBoxName,Text.Append(saveWord,"text"))
+        TextWindow.WriteLine(saveWord)
+    EndIf
+        if Controls.LastClickedButton = number1 then
+        saveWord = Controls.GetTextBoxText(textBoxName)
+        Controls.SetTextBoxText(textBoxName,Text.Append(saveWord,"1"))
+        TextWindow.WriteLine(saveWord)
+    EndIf
+        if Controls.LastClickedButton = number2 then
+        saveWord = Controls.GetTextBoxText(textBoxName)
+        Controls.SetTextBoxText(textBoxName,Text.Append(saveWord,"2"))
+        TextWindow.WriteLine(saveWord)
+    EndIf
+        if Controls.LastClickedButton = number3 then
+        saveWord = Controls.GetTextBoxText(textBoxName)
+        Controls.SetTextBoxText(textBoxName
+        ,Text.Append(saveWord,"3"))
+        TextWindow.WriteLine(saveWord)
+    EndIf
+        if Controls.LastClickedButton = number4 then
+        saveWord = Controls.GetTextBoxText(textBoxName)
+        Controls.SetTextBoxText(textBoxName,Text.Append(saveWord,"4"))
+        TextWindow.WriteLine(saveWord)
+    EndIf
+        if Controls.LastClickedButton = number5 then
+        saveWord = Controls.GetTextBoxText(textBoxName)
+        Controls.SetTextBoxText(textBoxName,Text.Append(saveWord,"5"))
+        TextWindow.WriteLine(saveWord)
+    EndIf
+        if Controls.LastClickedButton = number6 then
+        saveWord = Controls.GetTextBoxText(textBoxName)
+        Controls.SetTextBoxText(textBoxName,Text.Append(saveWord,6))
+        TextWindow.WriteLine(saveWord)
+    EndIf
+        if Controls.LastClickedButton = number7 then
+        saveWord = Controls.GetTextBoxText(textBoxName)
+        Controls.SetTextBoxText(textBoxName,Text.Append(saveWord,7))
+        TextWindow.WriteLine(saveWord)
+    EndIf
+        if Controls.LastClickedButton = number8 then
+        saveWord = Controls.GetTextBoxText(textBoxName)
+        Controls.SetTextBoxText(textBoxName,Text.Append(saveWord,8))
+        TextWindow.WriteLine(saveWord)
+    EndIf
+        if Controls.LastClickedButton = number9 then
+        saveWord = Controls.GetTextBoxText(textBoxName)
+        Controls.SetTextBoxText(textBoxName,Text.Append(saveWord,"9"))
+        TextWindow.WriteLine(saveWord)
+    EndIf
+            if Controls.LastClickedButton = number0 then
+        saveWord = Controls.GetTextBoxText(textBoxName)
+        Controls.SetTextBoxText(textBoxName,Text.Append(saveWord,"0"))
+        TextWindow.WriteLine(saveWord)
+    EndIf
+EndSub
