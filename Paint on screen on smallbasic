@@ -1,0 +1,44 @@
+GraphicsWindow.BackgroundColor = "Black"
+GraphicsWindow.PenColor = "White"
+GraphicsWindow.MouseDown = OnMouseDown
+GraphicsWindow.MouseDown = OnMouseMove
+GraphicsWindow.KeyDown = OnKeyDown
+
+Sub OnKeyDown
+    if(GraphicsWindow.LastKey = "R") then
+        GraphicsWindow.PenColor = "Red"
+    endif
+    if (GraphicsWindow.LastKey = "G") then
+        GraphicsWindow.PenColor = "Green"
+    endif
+    if(GraphicsWindow.LastKey = "P") then
+        GraphicsWindow.PenColor = "Pink"
+    endif
+    if(GraphicsWindow.LastKey = "C") then
+        GraphicsWindow.PenColor = "Cyan"
+    endif
+    if(GraphicsWindow.LastKey = "Y") then
+        GraphicsWindow.PenColor = "Yellow"
+    endif
+    if(GraphicsWindow.LastKey = "O") then
+        GraphicsWindow.PenColor = "Orange"
+    endif
+    if(GraphicsWindow.LastKey = "B") then
+        GraphicsWindow.PenColor = "Blue"
+    endif
+
+endsub
+
+Sub OnMouseMove
+    x = GraphicsWindow.MouseX
+    y = GraphicsWindow.MouseY
+    if (Mouse.IsLeftButtonDown) then
+        GraphicsWindow.DrawLine(prevx, prevY, x, y)
+    endif
+endsub
+
+Sub OnMouseDown
+    prevX = GraphicsWindow.MouseX
+    prevY = GraphicsWindow.MouseY
+endsub
+
