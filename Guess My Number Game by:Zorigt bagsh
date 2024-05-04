@@ -1,0 +1,58 @@
+Guess My number game by:Zorigt bagsh
+code : 
+
+
+start:
+TextWindow.Clear()
+round2 = 10
+round = 0
+number2 = Math.GetRandomNumber(100)
+TextWindow.Title = "Guess My Number"
+TextWindow.ForegroundColor = "Red"
+TextWindow.WriteLine("Guess My number")
+TextWindow.ForegroundCOlor = "Gray"
+TextWindow.WriteLine("")
+TextWindow.WriteLine("My number is less than 100.")
+TextWindow.WriteLine("You have" + round2 + " rounds")
+begin:
+TextWindow.Write("What's my number? ")
+number = textwindow.ReadNumber()
+if number = number2 then
+    TextWindow.WriteLine("You won")
+    TextWindow.WriteLine("Would you like to play again y/n")
+    playagain =TextWindow.Read()
+    if playagain="y" or playagain="yes" then
+        GoTo start
+    else 
+        if playagain="n" or playagain="no" then
+        Program.End()
+        endif
+    endif
+else
+    if number < number2 then
+        TextWindow.WriteLine("Too small")
+    else
+        TextWindow.WriteLine("Too large")
+    endif
+    if(round2- round)-1 > 1 then
+        round3="rounds"
+    else
+        round3="round"
+    endif
+    TextWindow.WriteLine("You have " + ((round2 - round)-1) + " " + round3 + "left")
+    round=round+1
+    if round < round2 then
+        Goto begin
+    else
+        TextWindow.WriteLine("You have run out of rounds")
+        TextWindow.Writeline("Would you like to play again y/n")
+        playagain=TextWindow.Read()
+        if playagain="y" or playagain="yes" then
+            GoTo start
+        else 
+            if playagain="n" or playagain="no" then
+                Program.End()
+            endif
+        endif
+endif
+endif
