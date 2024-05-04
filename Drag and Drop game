@@ -1,0 +1,56 @@
+GraphicsWindow.Title = "Drag and Drop"
+
+Init()
+MainLoop()
+
+Sub MainLoop
+    While True
+        While Not[mouseDown]
+            Program.Delay(200)
+        endwhile
+        x1 = Shapes.GetLeft(rect)
+        y1 = Shapes.GetTop(rect)
+        x2 = x1 + size
+        y2 = x1 + size
+        if (x1 <= mx) and (mx < x2) and (y1 <= my) and (my < y2) then
+            dx = mx - x1
+            dy = my - y1
+            While mouseDown
+                if mouseMove Then
+                    Shapes.Move(rect, mx -dx, my -dy)
+                    mouseMove = "False"
+                Endif
+            EndWhile
+        endif
+    endwhile
+endsub
+
+Sub Init
+    Not = "True =False; False=True"
+    GraphicsWindow.BackgroundColor = "#333333"
+    GraphicsWindow.PenWidth = 0
+    GraphicsWindow.BrushColor = "Gold"
+    size = 40
+    rect = Shapes.AddEllipse(size, size)
+    mouseDown = "False"
+    mouseMove = "False"
+    GraphicsWindow.MouseDown = OnMouseDown
+    GraphicsWindow.MouseUp = OnMouseUp
+    GraphicsWindow.MouseMove = OnMouseMove
+endsub
+
+Sub OnMouseDown
+    mx = GraphicsWindow.MouseX
+    my = GraphicsWindow.MouseY
+    mouseDown = "True"
+endsub
+
+sub OnMouseUp
+    mouseDown = "False"
+endsub
+
+sub OnMouseMove
+    mx = GraphicsWindow.MouseX
+    my = GraphicsWindow.MouseY
+    mouseMove = "True"
+endsub
